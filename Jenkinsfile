@@ -13,5 +13,17 @@ pipeline {
      sh 'java -jar rectangle.jar 7 9'
     }
    }
+   stage('Build-docker-image'){
+     steps{
+       sh "docker version"
+       sh "docker build -t swapna/test ."
+       print "tag docker image as latest"
+       sh "docker tag swapna/test swapna/test:latest"
+       print "docker push image"
+       sh "docker push swapna/test:latest"
+       print "docker remove image"
+       sh "docker rmi swapna/test:latest"
+     }
+   }
   }
 }
