@@ -1,7 +1,7 @@
 FROM debian:stable
-MAINTAINER swapna <swapnahdp9@gmail.com>
+MAINTAINER swapna <test123@gmail.com>
 
-RUN echo "sai" && echo "ram" && echo "swapna"
+RUN echo "sb" && echo "rp" && echo "sp"
 
 ARG BUILD_VERSION
 ENV BUILD_VERSION=$BUILD_VERSION
