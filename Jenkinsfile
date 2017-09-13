@@ -1,5 +1,4 @@
-node('docker'){
- pipeline {
+pipeline {
   agent any
    stages {
     stage('build') {
@@ -27,5 +26,5 @@ node('docker'){
       }
     }
    }
- }
 }
+
